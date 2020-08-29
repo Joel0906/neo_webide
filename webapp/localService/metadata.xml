@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema Namespace="JF.odata.test" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="ProdSetType">
+				<Key><PropertyRef Name="ID"/></Key><Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="60"/><Property Name="Name" Type="Edm.String" MaxLength="60"/><Property Name="Description" Type="Edm.String" MaxLength="80"/><Property Name="Rating" Type="Edm.Int32"/><Property Name="Price" Type="Edm.Decimal" Precision="16"/></EntityType>
+			<EntityContainer Name="test" m:IsDefaultEntityContainer="true"><EntitySet Name="ProdSet" EntityType="JF.odata.test.ProdSetType"/></EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

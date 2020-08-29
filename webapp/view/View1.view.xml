@@ -1,0 +1,59 @@
+<mvc:View controllerName="demo.demoUI5.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>titlepage1}" id="idpage1">
+				<headerContent>
+					<Button text="Next" press="onPress" type="Emphasized"></Button>
+				</headerContent>
+				<content>
+				<Button text="Create" type="Accept" width="10%" press="onCreate"/>
+				<Button text="Edit" width= "10%" press="onEdit"/>
+				<Button text="Delete" type="Reject" width="10%" press="onDelete"/>
+				<Table headerText="Products Table" id="idTable" items="{/ProdSet}" growingThreshold="5">
+					<columns>
+						<Column><Text text="ID"/></Column>
+						<Column><Text text="Name"/></Column>
+						<Column><Text text="Description"/></Column>
+						<!--<Column><Text text="Release-Date"/></Column>-->
+						<Column><Text text="Rating"/></Column>
+						<Column><Text text="Price"/></Column>
+					</columns>
+				
+					<items>
+						<ColumnListItem>
+							<Text text="{ID}"/>
+							<Text text="{Name}"/>
+							<Text text="{Description}"/>
+							<!--<Text text="{ReleaseDate}"/>-->
+							<Text text="{Rating}"/>
+							<Text text="{Price}"/>
+						</ColumnListItem>
+					</items>
+				</Table>
+				<f:SimpleForm id="idForm" editable="true">
+					<Title text="Add Product"></Title>
+					<Label text="ID" ></Label>
+					<Input id="idID" type="Number" width="10%"></Input>
+					<Label text="Name"></Label>
+					<Input id="idName" width="60%"></Input>
+					<Label text="Description"></Label>
+					<Input id="idDesc" width="70%"></Input>
+					<Label text="Rating"></Label>
+					<Input id="idRate" type="Number" width="10%"></Input>
+					<Label text="Price"></Label>
+					<Input id="idPrice" type="Number" width="20%"></Input>
+				</f:SimpleForm>
+				</content>
+				<footer>
+					<Toolbar>
+						<content/>
+						<ToolbarSpacer/>
+						<Button text="Save" type="Accept" press="onSave"/>
+						<Button text="Decline" type="Reject" press="onDecline"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
