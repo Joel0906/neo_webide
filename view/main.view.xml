@@ -1,0 +1,16 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="joel.controller.main"
+	xmlns:prince ="joel.customcontrol"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="myCustom Control">
+				<content>
+					<prince:myControl height="" width="" input="Joel is Crazy learning UI5" fontColor="green"></prince:myControl>
+					<prince:superButton text="Hover" onfocus="popUp"></prince:superButton>
+					<SearchField search="enterLoc"></SearchField>
+					<prince:googleMap></prince:googleMap>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
